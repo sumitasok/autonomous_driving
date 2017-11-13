@@ -22,6 +22,12 @@ def prepare_sequences(text, length):
         sequences.append(seq)
     return sequences
 
+def save_doc(lines, filename):
+    data = '\n'.join(lines)
+    file = open(filename, 'w')
+    file.write(data)
+    file.close()
+
 
 if __name__ == '__main__':
     raw_text = load_doc('rhyme.txt')
@@ -33,3 +39,5 @@ if __name__ == '__main__':
     sequences = prepare_sequences(raw_text, length)
 
     print('Total sequences %d' % len(sequences))
+
+    save_doc(sequences, 'char_sequences.txt')
