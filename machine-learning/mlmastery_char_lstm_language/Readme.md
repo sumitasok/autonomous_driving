@@ -15,3 +15,8 @@ king was in his counting house
 Input: hello worl
 hello worlb ee  cakrinnt aa ba
 ```
+
+LSTM layer has many blocks,
+blocks has many cells.
+
+[Quora: What-the-difference-between-an-LSTM-memory-cell-and-an-LSTM-layer](https://www.quora.com/What-the-difference-between-an-LSTM-memory-cell-and-an-LSTM-layer)
