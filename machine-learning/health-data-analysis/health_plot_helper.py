@@ -85,3 +85,8 @@ def severityByAgeAndGenderBarGraph(data, severity, ax = None):
         return sns.barplot(x=stacked.AgeGroup, y=stacked.value, hue=stacked[severity]).set_title("AgeGroup by Gender")
     else:
         return sns.barplot(x=stacked.AgeGroup, y=stacked.value, hue=stacked[severity], ax = ax).set_title("AgeGroup by Gender")
+
+def severityCrossTab(data, severities):
+    return pd.crosstab([data.Gender, data.AgeGroup],
+            severities,
+           margins=True).style.background_gradient(cmap='summer_r').set_properties(**{'border-color': 'black'})
